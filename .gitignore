@@ -160,4 +160,7 @@ cython_debug/
 #.idea/
 
 #Streamlit
-.streamlit/
+.streamlit/secrets.toml
+
+# 데이터 폴더(용량 무거움)
+data/

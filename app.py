@@ -1,24 +1,17 @@
-import numpy as np
-import streamlit as st
+ # -*- coding:utf-8 -*-
+
+import streamlit as st 
 import pandas as pd
-import requests
-import json
-import plotly.express as px
+import numpy as np
 from data_collect import load_data
-from data_collect import Range
-from data_collect import load_geojsondata
-import plotly.graph_objects as go
+from data_collect import Range  
+from data_collect import load_geojsondata   
+import plotly.express as px 
+import plotly.graph_objects as go 
+from datetime import datetime
+import requests
 from io import StringIO
-from plotly.subplots import make_subplots
 
-
-@st.cache_data
-def load_data():
-    #SSL 인증서 검증 비활성화를 위해 requests 모듈 사용
-    response = requests.get('https://raw.githubusercontent.com/ghkstod/TIL/main/data.txt', verify=False)
-    df=pd.read_csv(StringIO(response.text),encoding='utf-8',sep='\t')
-    df.drop(['Column1'],axis=1,inplace=True)
-    return df
 
 def load_deals_by_month(df, year, month):
     # 지정한 년도와 월에 해당하는 거래 데이터를 불러옴

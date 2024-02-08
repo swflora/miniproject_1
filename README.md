@@ -122,7 +122,7 @@ streamlit run app.py # 가상환경 내에서 실행
 
 # 발표자료 PDF 
 - 공모전에서 입상한 발표자료 PDF는 아래와 같습니다.
-  + [00발표자료_2024](portfolio.pdf)
+  + [miniproject_2024](potpolio.pdf)
 
 
 ## 팀원 소개
